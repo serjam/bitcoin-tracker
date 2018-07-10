@@ -1,32 +1,30 @@
 <template>
-  <div id="app">
-      <h1>tango</h1>
-    <!-- <img src="./assets/logo.png"> -->
-    <HelloWorld/>
-    <tango/>
-  </div>
+    <div id="container">
+        <div id="content">
+            <Price/>
+            <Metadata/>
+            <Graph/>
+        </div>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import tango from './components/tango'
+
+import Price from "./components/Price";
+import Metadata from "./components/Metadata";
+import Graph from "./components/Graph";
+
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    tango
-  }
-}
+    name: "App",
+    components: {
+        Price,
+        Metadata,
+        Graph
+    }
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+    @import './assets/styles.css';
 </style>
