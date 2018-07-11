@@ -1,6 +1,7 @@
-html{
+html {
     font-family: 'Poppins';
     color: #acb4cc;
+    background: #fff;
 }
 
 #container{
@@ -9,8 +10,6 @@ html{
 }
 
 #content{
-    background: #fff;
-    height: 100%;
     padding: 5em;
 
 }
@@ -26,7 +25,7 @@ html{
 
 #cryptoname{
     color: #223975;
-    font-size: 35pt;
+    font-size: 3em;
     font-weight: bold;
 }
 
@@ -37,7 +36,7 @@ html{
 
 #price{
     font-weight: 200;
-    font-size: 50pt;
+    font-size: 4em;
     color: #495473;
     /* transition: .3s; */
 }
@@ -48,6 +47,13 @@ html{
 }
 #graph{
     padding: 50px;
+}
+
+
+#svgholder {
+    position: absolute;
+    margin: auto;
+    bottom: 0;
 }
 @keyframes greenFlash{
     from {color: #495473;}
@@ -64,12 +70,11 @@ html{
 
 
 .floatr{
-    margin-right: 15em;
     float: right;
 }
 
 .details{
-    font-size: 20pt;
+    font-size: 2em;
 }
 
 
@@ -97,4 +102,27 @@ text{
 .area {
     fill: #e74c3c;
     opacity: 0.5;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .topbox {
+        margin: 0 auto;
+        width: 315px;
+        height: 175px;
+        margin-bottom: 1em;
+        display: block;
+        text-align: center;
+        float: none !important;
+    }
+    #content{
+        padding: 1em;
+    }
+    .details{
+        font-size: 1em;
+    }
+
+
 }
