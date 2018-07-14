@@ -5,14 +5,15 @@ html {
 }
 
 #container{
-    margin: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+    padding: 5em 3em 0em 3em;
+    text-align: center;
 
 }
 
-#content{
-    padding: 5em;
 
-}
 .ml50{
     margin-left: 50px;
 }
@@ -47,11 +48,11 @@ html {
 }
 #graph{
     padding: 50px;
+    display: block;
 }
 
 
 #svgholder {
-    position: absolute;
     margin: auto;
     bottom: 0;
 }
@@ -71,6 +72,9 @@ html {
 
 .floatr{
     float: right;
+}
+.floatl {
+    float: left;
 }
 
 .details{
@@ -103,7 +107,9 @@ text{
     fill: #e74c3c;
     opacity: 0.5;
 }
-
+.h10{
+    height: 10em;
+}
 
 
 
@@ -117,11 +123,26 @@ text{
         text-align: center;
         float: none !important;
     }
-    #content{
+    #container {
+        margin: 0 auto;
+        overflow: hidden;
+        height: 100%;
         padding: 1em;
     }
     .details{
         font-size: 1em;
+    }
+    .topbox:nth-of-type(2){
+        height:50px;
+    }
+
+    #graph {
+        margin: auto;
+        padding: 2em;
+        width: 90%;
+    }
+    .h10 {
+        height: 20em;
     }
 
 

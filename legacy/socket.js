@@ -69,8 +69,8 @@ window.onload = () => {
     ////////////////////////////// GRAPH CODE /////////////////////////
     
     //D3 Related letiables
-    let width = 1200;
-    let height = 500;
+    let width = 800;
+    let height = 600;
 
     //Mapping functions for each of x,y
     let xScale = d3.scaleTime()
@@ -85,9 +85,11 @@ window.onload = () => {
         .curve(d3.curveMonotoneX)
 
     //Append SVG placeholder
-    let graph = d3.select("#svgholder").append("svg")
+    let graph = d3.select("#container").append("svg")
         .attr("height", height)
         .attr("width", width)
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "0 0 800 600")
         .attr("id", "graph")
         .append("g")
 
