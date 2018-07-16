@@ -1,32 +1,33 @@
-html{
+html {
     font-family: 'Poppins';
     color: #acb4cc;
+    background: #fff;
 }
 
 #container{
-    margin: auto;
-
-}
-
-#content{
-    background: #fff;
+    margin: 0 auto;
+    overflow: hidden;
     height: 100%;
-    padding: 5em;
+    padding: 5em 3em 0em 3em;
+    text-align: center;
 
 }
+
+
 .ml50{
     margin-left: 50px;
 }
 .topbox{
     width: 315px;
     height: 175px;
-    margin-bottom: 3em;
-    display: inline-block;    
+    margin-bottom: 1em;
+    display: inline-block;  
+    text-align: initial;  
 }
 
 #cryptoname{
     color: #223975;
-    font-size: 35pt;
+    font-size: 3em;
     font-weight: bold;
 }
 
@@ -37,7 +38,7 @@ html{
 
 #price{
     font-weight: 200;
-    font-size: 50pt;
+    font-size: 4em;
     color: #495473;
     /* transition: .3s; */
 }
@@ -47,7 +48,17 @@ html{
     font-size: 35pt;
 }
 #graph{
-    padding: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    height: 65%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#svgholder {
+    margin: auto;
+    bottom: 0;
 }
 @keyframes greenFlash{
     from {color: #495473;}
@@ -64,12 +75,14 @@ html{
 
 
 .floatr{
-    margin-right: 15em;
     float: right;
+}
+.floatl {
+    float: left;
 }
 
 .details{
-    font-size: 20pt;
+    font-size: 2em;
 }
 
 
@@ -97,4 +110,44 @@ text{
 .area {
     fill: #e74c3c;
     opacity: 0.5;
+}
+.upper-area{
+    height: 10em;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .topbox {
+        margin: 0 auto;
+        width: 315px;
+        height: 175px;
+        margin-bottom: 1em;
+        display: block;
+        text-align: center;
+        float: none !important;
+    }
+    #container {
+        margin: 0 auto;
+        overflow: hidden;
+        height: 100%;
+        padding: 1em;
+    }
+    .details{
+        font-size: 1em;
+    }
+    .topbox:nth-of-type(2){
+        height:50px;
+    }
+
+    #graph {
+        margin: auto;
+        padding: 2em;
+        width: 90%;
+    }
+    .h10 {
+        height: 20em;
+    }
+
+
 }

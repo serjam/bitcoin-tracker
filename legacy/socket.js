@@ -85,7 +85,7 @@ window.onload = () => {
         .curve(d3.curveMonotoneX)
 
     //Append SVG placeholder
-    let graph = d3.select("#container").append("svg")
+    let graph = d3.select("#svgholder").append("svg")
         .attr("height", height)
         .attr("width", width)
         .attr("preserveAspectRatio", "xMinYMin meet")

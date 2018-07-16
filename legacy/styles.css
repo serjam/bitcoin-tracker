@@ -20,7 +20,7 @@ html {
 .topbox{
     width: 315px;
     height: 175px;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     display: inline-block;    
 }
 
@@ -47,8 +47,11 @@ html {
     font-size: 35pt;
 }
 #graph{
-    padding: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    height: 65%;
     display: block;
+    margin: 0 auto;
 }
 
 
