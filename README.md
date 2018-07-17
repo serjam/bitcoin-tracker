@@ -1,21 +1,25 @@
-# vueapp
+![Bitcoin Tracker Showcase Image](https://i.imgur.com/vK7fI8t.png)
 
-> A Vue.js project
+# Realtime Bitcoin Tracker
 
-## Build Setup
+This is a realtime web app that tracks the price, volume, and daily high of Bitcoin. It also helps visualize the data by graphing a set of the most recent data.
 
-``` bash
-# install dependencies
-npm install
+## Key Technologies Used
 
-# serve with hot reload at localhost:8080
-npm run dev
+``` 
+Adobe Photoshop
+- Frontend UI Design
 
-# build for production with minification
-npm run build
+Vue
+- Frontend JS Framework
 
-# build for production and view the bundle analyzer report
-npm run build --report
+D3
+- JavaScript data visualization library
+
+WebSockets
+- Enables the ability to stream data from a server using the pub/sub pattern
+
+
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For a live demo, check out this link: https://jnsr.github.io/bitcoin-tracker/
