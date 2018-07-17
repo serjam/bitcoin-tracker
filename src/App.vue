@@ -66,8 +66,8 @@ export default {
                     if(this.recordedPrices.length > MAX_PRICE_MEMORY)
                         this.recordedPrices.shift();
 
-                    console.log(this.lastPrice);
-                    console.log(this.recordedPrices);
+                    // console.log(this.lastPrice);
+                    // console.log(this.recordedPrices);
                     this.renderGraph(this.recordedPrices);
                 }
             }
