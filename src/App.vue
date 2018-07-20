@@ -44,7 +44,7 @@ export default {
                         ]
                     }
                 ]
-            }
+            };
             const MAX_PRICE_MEMORY = 50;
             const feedURL = 'wss://ws-feed.pro.coinbase.com';
             
@@ -56,11 +56,12 @@ export default {
 
             this.socket.onmessage = (msg) => {
                 let parsedJSON = JSON.parse(msg.data);
+
                 if(parsedJSON["type"] === "ticker"){
                     this.lastPrice = parseFloat(parsedJSON["price"]);
-                    this.recordedPrices.push({time: new Date(), value: parsedJSON["price"]})
-                    this.metaInfo['vol'] = parsedJSON['volume_24h']
-                    this.metaInfo['daily'] = parsedJSON['high_24h']
+                    this.recordedPrices.push({time: new Date(), value: parsedJSON["price"]});
+                    this.metaInfo['vol'] = parsedJSON['volume_24h'];
+                    this.metaInfo['daily'] = parsedJSON['high_24h'];
 
                     //Keep the array size under MAX_PRICE_MEMORY
                     if(this.recordedPrices.length > MAX_PRICE_MEMORY)
@@ -89,6 +90,7 @@ export default {
 
             
         },
+        //Return with 2 decimal places and commas where necessary (regex)
         getCleanValue(data) {
             return parseFloat(data)
                     .toFixed(2)
@@ -97,8 +99,7 @@ export default {
     },
 
     mounted () {
-        //Start streaming data from websocket
-        this.connect()
+        this.connect(); //Start streaming data from websocket
 
         //---GRAPH CODE---//
 
@@ -108,26 +109,26 @@ export default {
 
         //Mapping functions for each of x,y
         this.xScale = d3.scaleTime()
-            .range([0,width])
+            .range([0,width]);
         this.yScale = d3.scaleLinear()
-            .range([height,0])
+            .range([height,0]);
             
         //Line function, maps time,value to x,y cords
-        var that = this
+        let vm = this;
         this.line = d3.line()
             .x(function(d){ return that.xScale(d.time); })
             .y(function(d){ return that.yScale(d.value); })
-            .curve(d3.curveMonotoneX)
+            .curve(d3.curveMonotoneX);
 
-        //Append graph to placeholder
+        //Append graph to DOM
         let graph = d3.select("#container").append("svg")
             .attr("height", height)
             .attr("width", width)
             .attr("preserveAspectRatio", "xMinYMin meet")
             .attr("viewBox", "0 0 800 600")
             .attr("id", "graph")
-            .append("g")
-        this.path = graph.append('path').attr("stroke-linecap","round")
+            .append("g");
+        this.path = graph.append('path').attr("stroke-linecap","round");
 
             
         //Y Axis

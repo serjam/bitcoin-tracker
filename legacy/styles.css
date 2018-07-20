@@ -59,18 +59,6 @@ html {
     margin: auto;
     bottom: 0;
 }
-@keyframes greenFlash{
-    from {color: #495473;}
-    50% {color: #84ce95;}
-    60% {color: #84ce95;}
-    to {color: #495473;}
-}
-@keyframes redFlash{
-    from {color: #495473;}
-    50% {color: #f36330;}
-    60% {color: #f36330;}
-    to {color: #495473;}
-}
 
 
 .floatr{
@@ -86,33 +74,33 @@ html {
 
 
 
-.domain{
-    stroke: #f7f8fb;
-    stroke-width: 3px;
-    z-index: -1;
-
-}
-.tick{
-    font-family: inherit;
-}
 line{
     stroke: #f7f8fb;
 }
 text{
     fill: #acb4cc;
 }
-.smoothline {
-    fill: none;
-    stroke: #acb4cc;
-    stroke-width: 3px;
-}
-.area {
-    fill: #e74c3c;
-    opacity: 0.5;
-}
+
 .h10{
     height: 10em;
 }
+
+
+
+@keyframes greenFlash{
+    from {color: #495473;}
+    50% {color: #84ce95;}
+    60% {color: #84ce95;}
+    to {color: #495473;}
+}
+@keyframes redFlash{
+    from {color: #495473;}
+    50% {color: #f36330;}
+    60% {color: #f36330;}
+    to {color: #495473;}
+}
+
+
 
 
 

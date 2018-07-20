@@ -74,15 +74,15 @@ window.onload = () => {
 
     //Mapping functions for each of x,y
     let xScale = d3.scaleTime()
-        .range([0,width])
+        .range([0,width]);
     let yScale = d3.scaleLinear()
-        .range([height,0])
+        .range([height,0]);
         
     //Line function, maps time,value to x,y cords
     let line = d3.line()
         .x(function(d){ return xScale(d.time); })
         .y(function(d){ return yScale(d.value); })
-        .curve(d3.curveMonotoneX)
+        .curve(d3.curveMonotoneX);
 
     //Append SVG placeholder
     let graph = d3.select("#svgholder").append("svg")
@@ -91,9 +91,9 @@ window.onload = () => {
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "0 0 800 600")
         .attr("id", "graph")
-        .append("g")
+        .append("g");
 
-    let path = graph.append('path').attr("stroke-linecap","round")
+    let path = graph.append('path').attr("stroke-linecap","round");
 
         
     // //Y Axis
