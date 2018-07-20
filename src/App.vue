@@ -116,8 +116,8 @@ export default {
         //Line function, maps time,value to x,y cords
         let vm = this;
         this.line = d3.line()
-            .x(function(d){ return that.xScale(d.time); })
-            .y(function(d){ return that.yScale(d.value); })
+            .x(function(d){ return vm.xScale(d.time); })
+            .y(function(d){ return vm.yScale(d.value); })
             .curve(d3.curveMonotoneX);
 
         //Append graph to DOM
