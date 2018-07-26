@@ -8,7 +8,7 @@ This is a realtime web app that tracks the price, volume, and daily high of Bitc
 
 ``` 
 Adobe Photoshop
-- Frontend UI Design
+- UI Design
 
 Vue
 - Frontend JS Framework
