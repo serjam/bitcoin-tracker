@@ -1,0 +1,61 @@
+<html>
+        <meta name="description" content="This is a template container that is used for every visualzation project of mine.">
+        <meta name="keywords" content="data visualization, d3, javascript">
+        <meta name="author" content="Ashkan Farhangi">
+      
+<head>
+    <!-- CSS -->
+    <link rel='stylesheet' href='styles.css' />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,700" rel="stylesheet">
+    <!-- Javascript -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <!-- <script src="chart.js"type = "text/javascript"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+    <body>
+        <div id="container">
+            <div class="h10">
+                <div class="topbox floatl">
+                    <div id="cryptoname">
+                        Bitcoin<span class="ticker">BTC</span>
+                    </div>
+                    <div id="price"></div>
+                </div>
+                <div class="topbox floatr">
+                    <div class="details">Transaction Volume: <span id="volume"></span></div>
+                    <div class="details">Today's Highest Price: <span id="dailyhigh"></span></div>
+                </div>
+             </div>
+             <div id="svgholder"></div>
+        </div>
+        <div id="container1">
+                <div class="h10">
+                    <div class="topbox floatl">
+                        <div id="cryptoname">
+                            <!-- Bitcoin<span class="ticker">BTC</span> -->
+                        </div>
+                        <div id="chartWrapper" width="1600" height = "600"></div>
+                    </div>
+                    <div class="topbox floatr">
+                        <!-- <div class="details">Monthly View: <span id="volume"></span></div> -->
+                    </div>
+                 </div>
+                 <div id="svgholder"></div>
+            </div>
+    
+        <div class="topbox floatl">
+                <div id="cryptoname">
+
+                </div>
+                Powered by: CoinBase
+        <script src="lib.js"></script>
+        <script type="" src='buildLineChart.js'></script>
+        <script src ="loadData.js"></script>
+        <script type="" src="chart.js"> </script>
+
+
+    </body>
+</html>
