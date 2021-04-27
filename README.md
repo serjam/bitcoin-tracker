@@ -22,4 +22,4 @@ WebSockets
 
 ```
 
-For a live demo, check out this link: https://jnsr.github.io/bitcoin-tracker/
+For a live demo, check out this link: https://jamnsr.github.io/bitcoin-tracker/
